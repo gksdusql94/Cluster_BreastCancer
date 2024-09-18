@@ -79,15 +79,13 @@ from pyspark.ml.linalg import Vectors
 features = spark.createDataFrame(vectors.map(Row), ["features"])
 labels = pd.Series(breast_cancer.target)
 
-"""### Your task
-
+"""
 If you run successfully the Setup and Data Preprocessing stages, you are now ready to cluster the data with the [K-means](https://spark.apache.org/docs/latest/ml-clustering.html) algorithm included in MLlib (Spark's Machine Learning library).
 Set the ```k``` parameter to **2**, fit the model, and the compute the [Silhouette score](https://en.wikipedia.org/wiki/Silhouette_(clustering)) (i.e., a measure of quality of the obtained clustering).  
 
 **IMPORTANT:** use the MLlib implementation of the Silhouette score (via ```ClusteringEvaluator```).
 """
 
-# YOUR CODE HERE
 from pyspark.ml.clustering import KMeans
 from pyspark.ml.evaluation import ClusteringEvaluator
 
@@ -164,8 +162,3 @@ cluster_indic_svd = predictions_svd.select("prediction").rdd.flatMap(lambda x: x
 correctly_clustered_svd = np.count_nonzero(cluster_indic_svd == labels)
 
 print("Number of data points clustered correctly (SVD):", correctly_clustered_svd)
-
-"""#### **Submission Intruction:**
-
-#### Click File -> Download -> Download .ipynb, and upload the downloaded file to Blackboard.
-"""
