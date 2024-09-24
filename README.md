@@ -35,3 +35,10 @@ This project demonstrates the use of **K-Means clustering** and **Singular Value
    !pip install pyspark
    !pip install -U -q PyDrive
    !apt install openjdk-8-jdk-headless -qq
+   
+### Result:
+   Reduction Utilized the Breast Cancer Wisconsin dataset to apply unsupervised learning and dimensionality reduction techniques for efficient data analysis.
+-	Classified the data into two clusters (Benign and Malignant) using K-Means clustering, achieving a Silhouette score of 0.834, demonstrating strong intra-cluster cohesion. 
+-	Applied Singular Value Decomposition (SVD) to reduce the dataset's dimensionality by 15 times while maintaining a Silhouette score of 0.835, ensuring the model's accuracy and efficiency post-reduction. 
+-	This confirmed that dimensionality reduction did not significantly impact analysis results while reducing computational costs
+
