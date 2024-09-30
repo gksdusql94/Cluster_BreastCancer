@@ -16,7 +16,7 @@ This project demonstrates the use of **K-Means clustering** and **Singular Value
 
 ---
 
-## Setup
+## 🔍 Setup
 
 To run this project in Google Colab, first install the required packages and set up Spark and Java:
 
@@ -34,7 +34,7 @@ os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
 
 ---
 
-## Data Preprocessing
+## 🛠️ Data Preprocessing
 
 The Breast Cancer dataset is loaded using the scikit-learn library, then converted into a Spark DataFrame for processing.
 
@@ -75,7 +75,7 @@ pca_model = pca.fit(features)
 svdFeatures = pca_model.transform(features).select("svdFeatures")
 ```
 
-## Results:
+## 📈 Results:
 - **K-Means clustering** was applied to classify the data into two clusters (Benign and Malignant), achieving a **Silhouette Score of 0.834**, demonstrating strong intra-cluster cohesion.
 - **Singular Value Decomposition (SVD)** was used to reduce the dataset's dimensionality by **15x** while maintaining a **Silhouette Score of 0.835**, ensuring the model's accuracy and efficiency post-reduction.
 - The results confirmed that dimensionality reduction did not significantly impact clustering performance, while **reducing computational costs**.
@@ -92,7 +92,7 @@ silhouette_score_svd = evaluator.evaluate(model_svd.transform(svdFeatures))
 print(f'Silhouette Score (SVD): {silhouette_score_svd}')
 ```
 
-## Visualization
+## 📊 Visualization
 We include several visualizations to help understand the clustering and dimensionality reduction results:
 
 ### 1. PCA Visualization:
@@ -171,11 +171,11 @@ plt.show()
 - `pandas`
 - `numpy`
 
-## Conclusion
+## 🎯 Conclusion
 - K-Means clustering was applied to classify the data into two clusters (Benign and Malignant), achieving a Silhouette Score of 0.834.
 - Singular Value Decomposition (SVD) reduced the dataset's dimensionality by 15x while maintaining a Silhouette Score of 0.835.
 - Dimensionality reduction optimized computational performance without sacrificing model accuracy.
-- 
+
 ## Running the Code:
 To run the code in Colab, install the necessary packages using:
 ```bash
