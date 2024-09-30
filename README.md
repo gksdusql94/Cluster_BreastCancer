@@ -3,16 +3,16 @@
 This project demonstrates the use of **K-Means clustering** and **Singular Value Decomposition (SVD)** to analyze the well-known **Breast Cancer Wisconsin dataset** using **Apache Spark** on Colab. The project includes various stages such as data preprocessing, clustering, dimensionality reduction, and comprehensive data visualization to illustrate the results.
 
 ## Table of Contents
-1. [Setup](#setup)
-2. [Data Preprocessing](#data-preprocessing)
-3. [Clustering with K-Means](#clustering-with-k-means)
-4. [Dimensionality Reduction](#dimensionality-reduction)
-5. [Results Comparison](#results-comparison)
-6. [Visualization](#visualization)
-7. [Silhouette Score Evaluation](#silhouette-score-evaluation)
-8. [Dependencies](#dependencies)
-9. [Conclusion](#conclusion)
-10. [Running the Code](#running-the-code)
+1. [🔍 Setup](#setup)
+2. [🛠️ Data Preprocessing](#data-preprocessing)
+3. [📊 Clustering with K-Means](#clustering-with-k-means)
+4. [🔽 Dimensionality Reduction](#dimensionality-reduction)
+5. [📈 Results Comparison](#results-comparison)
+6. [📊 Visualization](#visualization)
+7. [📉 Silhouette Score Evaluation](#silhouette-score-evaluation)
+8. [📦 Dependencies](#dependencies)
+9. [🎯 Conclusion](#conclusion)
+10. [🚀 Running the Code](#running-the-code)
 
 ---
 
@@ -48,7 +48,7 @@ df = spark.createDataFrame(pd_df)
 ```
 The features are stored in a Spark DataFrame as Dense Vectors, and the labels indicating whether the subject has cancer (malignant) or not (benign) are stored in a separate series
 
-## Clustering with K-Means
+## 📊 Clustering with K-Means
 We apply K-Means clustering with k=2 (since the dataset has two classes: benign and malignant). The clustering performance is evaluated using the Silhouette score.
 
 ```python
@@ -64,7 +64,7 @@ evaluator = ClusteringEvaluator()
 silhouette_score = evaluator.evaluate(predictions)
 print(f'Silhouette Score: {silhouette_score}')
 ```
-## Dimensionality Reduction
+## 🔽 Dimensionality Reduction
 To optimize computational efficiency, we apply Singular Value Decomposition (SVD) to reduce the dimensionality of the dataset by a factor of 15x.
 
 ```python
@@ -75,12 +75,10 @@ pca_model = pca.fit(features)
 svdFeatures = pca_model.transform(features).select("svdFeatures")
 ```
 
-## 📈 Results:
+## 📈 Results Comparison
 - **K-Means clustering** was applied to classify the data into two clusters (Benign and Malignant), achieving a **Silhouette Score of 0.834**, demonstrating strong intra-cluster cohesion.
 - **Singular Value Decomposition (SVD)** was used to reduce the dataset's dimensionality by **15x** while maintaining a **Silhouette Score of 0.835**, ensuring the model's accuracy and efficiency post-reduction.
 - The results confirmed that dimensionality reduction did not significantly impact clustering performance, while **reducing computational costs**.
-
-We compare the clustering results with the original labels to check how well the K-Means algorithm grouped the data before and after dimensionality reduction. After applying SVD, the Silhouette score remains nearly identical at 0.835, showing that dimensionality reduction did not significantly affect clustering performance.
 
 ```python
 # Perform K-Means on SVD-reduced data
@@ -162,7 +160,7 @@ plt.axvline(silhouette_score(breast_cancer.data, labels), color='red', linestyle
 plt.show()
 ```
 
-## Dependencies:
+## 📦 Dependencies:
 - `pyspark`
 - `scikit-learn`
 - `pandas`
@@ -173,7 +171,7 @@ plt.show()
 - Singular Value Decomposition (SVD) reduced the dataset's dimensionality by 15x while maintaining a Silhouette Score of 0.835.
 - Dimensionality reduction optimized computational performance without sacrificing model accuracy.
 
-## Running the Code:
+## 🚀 Running the Code:
 To run the code in Colab, install the necessary packages using:
 ```bash
 !pip install pyspark
