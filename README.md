@@ -159,18 +159,18 @@ plt.axvline(silhouette_score(breast_cancer.data, labels), color='red', linestyle
 plt.show()
 ```
 
-## 📦 Dependencies:
+## 📦Dependencies
 - `pyspark`
 - `scikit-learn`
 - `pandas`
 - `numpy`
 
-## 🎯 Conclusion
+## 🎯Conclusion
 - K-Means clustering was applied to classify the data into two clusters (Benign and Malignant), achieving a Silhouette Score of 0.834.
 - Singular Value Decomposition (SVD) reduced the dataset's dimensionality by 15x while maintaining a Silhouette Score of 0.835.
 - Dimensionality reduction optimized computational performance without sacrificing model accuracy.
 
-## 🚀 Running the Code:
+## 🚀Running the Code
 To run the code in Colab, install the necessary packages using:
 ```bash
 !pip install pyspark
