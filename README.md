@@ -145,9 +145,6 @@ plt.show()
 - A **Silhouette plot** is used to assess the quality of the clusters formed by the K-Means algorithm. The average **Silhouette Score** of **0.834** demonstrates strong intra-cluster cohesion and separation, validating the effectiveness of the clustering algorithm.
 ![image](https://github.com/user-attachments/assets/7ca5f5c4-7f62-4095-b2bc-840c53b7a18f)
 
-##. Silhouette Plot:
-We evaluate the clustering performance using the Silhouette plot, which shows how well each point fits within its assigned cluster. The average score of 0.834 confirms strong intra-cluster cohesion.
-
 ```python
 from sklearn.metrics import silhouette_samples, silhouette_score
 
