@@ -3,16 +3,16 @@
 This project demonstrates the use of **K-Means clustering** and **Singular Value Decomposition (SVD)** to analyze the well-known **Breast Cancer Wisconsin dataset** using **Apache Spark** on Colab. The project includes various stages such as data preprocessing, clustering, dimensionality reduction, and comprehensive data visualization to illustrate the results.
 
 ## Table of Contents
-1. [🔍 Setup](##Setup)
-2. [🛠️ Data Preprocessing](##data-preprocessing)
-3. [📊 Clustering with K-Means](##clustering-with-k-means)
-4. [🔽 Dimensionality Reduction](##dimensionality-reduction)
-5. [📈 Results Comparison](##results-comparison)
-6. [📊 Visualization](##visualization)
-7. [📉 Silhouette Score Evaluation](##silhouette-score-evaluation)
-8. [📦 Dependencies](##dependencies)
-9. [🎯 Conclusion](##conclusion)
-10. [🚀 Running the Code](##running-the-code)
+1. [🔍 Setup](#setup)
+2. [🛠️ Data Preprocessing](#data-preprocessing)
+3. [📊 Clustering with K-Means](#clustering-with-k-means)
+4. [🔽 Dimensionality Reduction](#dimensionality-reduction)
+5. [📈 Results Comparison](#results-comparison)
+6. [📊 Visualization](#visualization)
+7. [📉 Silhouette Score Evaluation](#silhouette-score-evaluation)
+8. [📦 Dependencies](#dependencies)
+9. [🎯 Conclusion](#conclusion)
+10. [🚀 Running the Code](#running-the-code)
 
 ---
 
