@@ -31,15 +31,19 @@ Data visualizations are included to provide a clearer understanding of the clust
 
 ### 1. PCA Visualization:
 - A **PCA plot** shows the Breast Cancer dataset reduced to two components, visually displaying the separation between benign and malignant tumors.
+![image](https://github.com/user-attachments/assets/78fecff0-03ae-4814-ad32-b60b5e7865a6)
 
 ### 2. K-Means Clustering with Centroids:
 - A plot visualizes the clusters formed by the K-Means algorithm, highlighting the **cluster centroids** with red markers. This illustrates how the algorithm has grouped the dataset into two clusters.
+![image](https://github.com/user-attachments/assets/b3351ee2-78af-41a0-b166-548bb48e9cca)
 
 ### 3. SVD Clustering:
 - A similar visualization is provided after applying **SVD** for dimensionality reduction, showing that the clusters remain well-separated even after reducing the dataset’s dimensionality by 15x.
+![image](https://github.com/user-attachments/assets/37dad0b7-a9d5-4b37-95d8-9482099e31a9)
 
 ### 4. Silhouette Plot:
 - A **Silhouette plot** is used to assess the quality of the clusters formed by the K-Means algorithm. The average **Silhouette Score** of **0.834** demonstrates strong intra-cluster cohesion and separation, validating the effectiveness of the clustering algorithm.
+![image](https://github.com/user-attachments/assets/7ca5f5c4-7f62-4095-b2bc-840c53b7a18f)
 
 ---
 
