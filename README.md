@@ -3,7 +3,7 @@
 This project demonstrates the use of **K-Means clustering** and **Singular Value Decomposition (SVD)** to analyze the well-known **Breast Cancer Wisconsin dataset** using **Apache Spark** on Colab. The project includes various stages such as data preprocessing, clustering, dimensionality reduction, and comprehensive data visualization to illustrate the results.
 
 ## Table of Contents
-1. [🔍 Setup](##🔍Setup)
+1. [🔍 Setup](##Setup)
 2. [🛠️ Data Preprocessing](##data-preprocessing)
 3. [📊 Clustering with K-Means](##clustering-with-k-means)
 4. [🔽 Dimensionality Reduction](##dimensionality-reduction)
@@ -34,7 +34,7 @@ os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
 
 ---
 
-## 🛠️ Data Preprocessing
+## 🛠️Data Preprocessing
 
 The Breast Cancer dataset is loaded using the scikit-learn library, then converted into a Spark DataFrame for processing.
 
