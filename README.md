@@ -56,7 +56,7 @@ Data visualizations are included to provide a clearer understanding of the clust
 - **K-Means clustering** was applied to classify the data into two clusters (Benign and Malignant), achieving a **Silhouette Score of 0.834**, demonstrating strong intra-cluster cohesion.
 - **Singular Value Decomposition (SVD)** was used to reduce the dataset's dimensionality by **15x** while maintaining a **Silhouette Score of 0.835**, ensuring the model's accuracy and efficiency post-reduction.
 - The results confirmed that dimensionality reduction did not significantly impact clustering performance, while **reducing computational costs**.
-- 
+
 ## Running the Code:
 To run the code in Colab, install the necessary packages using:
 ```bash
