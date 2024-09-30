@@ -9,10 +9,9 @@ This project demonstrates the use of **K-Means clustering** and **Singular Value
 4. [🔽 Dimensionality Reduction](#dimensionality-reduction)
 5. [📈 Results Comparison](#results-comparison)
 6. [📊 Visualization](#visualization)
-7. [📉 Silhouette Score Evaluation](#silhouette-score-evaluation)
-8. [📦 Dependencies](#dependencies)
-9. [🎯 Conclusion](#conclusion)
-10. [🚀 Running the Code](#running-the-code)
+7. [📦 Dependencies](#dependencies)
+8. [🎯 Conclusion](#conclusion)
+9. [🚀 Running the Code](#running-the-code)
 
 ---
 
@@ -48,7 +47,7 @@ df = spark.createDataFrame(pd_df)
 ```
 The features are stored in a Spark DataFrame as Dense Vectors, and the labels indicating whether the subject has cancer (malignant) or not (benign) are stored in a separate series
 
-## 📊 Clustering with K-Means
+## 📊Clustering with K-Means
 We apply K-Means clustering with k=2 (since the dataset has two classes: benign and malignant). The clustering performance is evaluated using the Silhouette score.
 
 ```python
@@ -64,7 +63,7 @@ evaluator = ClusteringEvaluator()
 silhouette_score = evaluator.evaluate(predictions)
 print(f'Silhouette Score: {silhouette_score}')
 ```
-## 🔽 Dimensionality Reduction
+## 🔽Dimensionality Reduction
 To optimize computational efficiency, we apply Singular Value Decomposition (SVD) to reduce the dimensionality of the dataset by a factor of 15x.
 
 ```python
@@ -75,7 +74,7 @@ pca_model = pca.fit(features)
 svdFeatures = pca_model.transform(features).select("svdFeatures")
 ```
 
-## 📈 Results Comparison
+## 📈Results Comparison
 - **K-Means clustering** was applied to classify the data into two clusters (Benign and Malignant), achieving a **Silhouette Score of 0.834**, demonstrating strong intra-cluster cohesion.
 - **Singular Value Decomposition (SVD)** was used to reduce the dataset's dimensionality by **15x** while maintaining a **Silhouette Score of 0.835**, ensuring the model's accuracy and efficiency post-reduction.
 - The results confirmed that dimensionality reduction did not significantly impact clustering performance, while **reducing computational costs**.
@@ -90,7 +89,7 @@ silhouette_score_svd = evaluator.evaluate(model_svd.transform(svdFeatures))
 print(f'Silhouette Score (SVD): {silhouette_score_svd}')
 ```
 
-## 📊 Visualization
+## 📊Visualization
 We include several visualizations to help understand the clustering and dimensionality reduction results:
 
 ### 1. PCA Visualization:
